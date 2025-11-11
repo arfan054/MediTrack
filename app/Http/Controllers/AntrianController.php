@@ -9,8 +9,7 @@ class AntrianController extends Controller
 {
     public function index()
     {
-        $queues = antrian::orderBy('tanggal', 'desc')->get();
-        return view('home.index', compact('queues'));
+        return view('home');
     }
 
     public function create()

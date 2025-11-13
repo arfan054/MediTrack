@@ -56,7 +56,7 @@
     <h2 class="text-4xl font-semibold text-center text-[#022839] mb-10">Alamat</h2>
 
     <div class="max-w-5xl mx-auto text-center mb-8 text-lg text-gray-700 leading-relaxed">
-        <p><strong>MediTrack Dental Clinic</strong></p>
+        <p><strong>MediTrack</strong></p>
         <p>Jl. Kesehatan No. 123, Jakarta Selatan, DKI Jakarta 12560</p>
         <p>Telp: (021) 555-7890</p>
         <p>Email: info@meditrack.id</p>

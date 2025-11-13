@@ -3,7 +3,7 @@
 @section('content')
 <div class="min-h-screen bg-gray-100 flex items-center justify-center">
     <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-        <h1 class="text-2xl font-semibold text-center text-blue-600 mb-6">Formulir Pendaftaran Medic</h1>
+        <h1 class="text-2xl font-semibold text-center text-blue-600 mb-6">Formulir Pendaftaran MediTrack</h1>
 
         <form action="{{ route('home.store') }}" method="POST" class="space-y-4">
             @csrf

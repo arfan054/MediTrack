@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\antrian;
 use Illuminate\Http\Request;
+use App\Models\Antrian;
 
 class AntrianController extends Controller
 {
@@ -14,29 +14,22 @@ class AntrianController extends Controller
 
     public function create()
     {
-        return view('home.create');
+        return view('daftar');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'layanan' => 'required',
-            'tanggal' => 'required|date',
-            'waktu' => 'required',
+        $validated = $request->validate([
+            'nama' => 'required|string|max:255',
+            'nik' => 'required|string|max:20',
+            'tanggal_lahir' => 'required|date',
+            'jenis_kelamin' => 'required|string',
+            'alamat' => 'required|string',
+            'no_hp' => 'required|string|max:15',
         ]);
 
-        $count = antrian::where('tanggal', $request->tanggal)->count();
-        $nomor = $count + 1;
+        Antrian::create($validated);
 
-        antrian::create([
-            'nama' => $request->nama,
-            'layanan' => $request->layanan,
-            'tanggal' => $request->tanggal,
-            'waktu' => $request->waktu,
-            'nomor_antrian' => $nomor,
-        ]);
-
-        return redirect()->route('home.index')->with('success', 'Pendaftaran antrian berhasil!');
+        return redirect()->route('home.index')->with('success', 'Pendaftaran berhasil!');
     }
 }

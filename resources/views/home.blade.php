@@ -17,7 +17,7 @@
 <section class="relative h-screen w-full">
 
     <!-- Background foto -->
-    <img src="/img/clinic.jpg"
+    <img src="/img/clinic.png"
          class="absolute inset-0 w-full h-full object-cover z-0">
 
     <!-- Overlay gradient (warna yang kamu kasih) -->
@@ -38,7 +38,7 @@
 
     <!-- Tombol Daftar Antrian -->
     <div class="absolute z-20 bottom-32 inset-x-0 flex justify-center">
-        <a href="#antrian"
+        <a href="{{ route('home.store') }}"
            class="bg-[#24968b] text-white font-semibold text-2xl px-20 py-5 rounded-[20px] hover:opacity-90 transition-all">
            Daftar antrian
         </a>

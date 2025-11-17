@@ -9,11 +9,6 @@
 </head>
 
 <body class="font-sans">
-
-
-<!-- ========================================================= -->
-<!-- PAGE 1 — HERO / LANDING  (SAMA PERSIS DESAIN PDF PAGE 1) -->
-<!-- ========================================================= -->
 <section class="relative h-screen w-full">
 
     <!-- Background foto -->
@@ -117,6 +112,16 @@
 <footer class="py-6 text-center text-white text-lg" style="background-color: #00c4cc;">
     <p>© 2025 MediTrack</p>
 </footer>
+
+
+@if(session('nomor_antrian'))
+<div class="p-4 bg-green-200 rounded-lg text-center mt-4">
+    <h2 class="text-xl font-bold">Pendaftaran Berhasil!</h2>
+    <p class="mt-2">Nomor Antrian Anda:</p>
+    <h1 class="text-5xl font-extrabold mt-2">{{ session('nomor_antrian') }}</h1>
+</div>
+@endif
+
 
 
 </body>

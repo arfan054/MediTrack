@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('antrian', function (Blueprint $table) {
-         $table->id();
-         $table->string('nama');
-           $table->string('layanan');
-         $table->date('tanggal');
-           $table->time('waktu');
-         $table->integer('nomor_antrian');
-         $table->timestamps();
-         });
+        Schema::table('antrian', function (Blueprint $table) {
+            //
+        });
     }
 
     /**
@@ -27,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('antrian');
+        Schema::table('antrian', function (Blueprint $table) {
+            //
+        });
     }
 };

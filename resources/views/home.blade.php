@@ -27,7 +27,7 @@
         <ul class="flex gap-14 font-semibold text-white text-xl">
             <li><a href="#alamat" class="hover:opacity-70">Alamat</a></li>
             <li><a href="#layanan" class="hover:opacity-70">Layanan</a></li>
-            <li><a href="#login" class="hover:opacity-70">Log in</a></li>
+            <li><a href="{{ route('home.store') }}" class="hover:opacity-70">Log in</a></li>
         </ul>
     </nav>
 
